@@ -13,6 +13,13 @@ class AddProjectsTable extends Migration {
 	public function up()
 	{
 		//
+		Schema::create('projects', function($table){
+			$table->increments('id');
+			$table->string('CompanyName');
+			$table->string('Title');
+			$table->integer('MinPeople');
+			$table->integer('MaxPeople');
+			});
 	}
 
 	/**
@@ -23,6 +30,7 @@ class AddProjectsTable extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('projects');
 	}
 
 }
