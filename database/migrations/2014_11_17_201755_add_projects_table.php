@@ -15,8 +15,8 @@ class AddProjectsTable extends Migration {
 		//
 		Schema::create('projects', function($table){
 			$table->increments('id');
-			$table->string('CompanyName');
-			$table->string('Title');
+			$table->string('Client');
+			$table->string('Project');
 			$table->integer('MinPeople');
 			$table->integer('MaxPeople');
 			});
