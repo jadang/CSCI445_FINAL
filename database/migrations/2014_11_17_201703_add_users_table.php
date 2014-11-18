@@ -13,6 +13,14 @@ class AddUsersTable extends Migration {
 	public function up()
 	{
 		//
+		Schema:create('students',function($table) {
+			$table->increments('id');
+			$table->string('First');
+			$table->string('Last');
+			$table->string('CWID');
+			$table->string('Email');
+		});
+		
 		Schema::create('users', function($table){
 			$table->increments('id');
 			$table->string('FirstName');
@@ -46,6 +54,7 @@ class AddUsersTable extends Migration {
 	{
 		//
 		Schema::drop('users');
+		Schema::drop('students');
 		Schema::drop('projects');
 	}
 
