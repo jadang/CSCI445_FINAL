@@ -2,12 +2,12 @@
 
 use Flynsarmy\CsvSeeder\CsvSeeder;
 
-class ProjectsTableSeeder extends CsvSeeder {
+class StudentsTableSeeder extends CsvSeeder {
 
 	public function __construct() 
 	{
-		$this->table = 'projects';
-		$this->filename = app_path().'/database/seeds/csvs/Projects.txt';
+		$this->table = 'students';
+		$this->filename = app_path().'/database/seeds/csvs/Students.txt';
 	}
 	/**
 	 * Run the database seeds.

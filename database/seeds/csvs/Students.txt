@@ -26,15 +26,15 @@ Porky,Pig,123654,porky@mines.edu
 Garfield,Cat,387612,garfield@mines.edu
 Peter,Pan,982765,pan@mines.edu
 Foghorn,Leghorn,762341,fleghorn@mines.edu
-Manning, Peyton, 772233, pmanning@mines.edu
-Welker, Wes, 123456, wwelker@mines.edu
-Thomas, Julias, 123457, jthomas@mines.edu
-Sanders, Emmanuel, 123458, esanders@mines.edu
-Tamme, Jason, 123569, jtamme@mines.edu
-Knighton, Terrance, 123450, tk@mines.edu
-Colquitt, Britton, 098765, bcol@mines.edu
-Roby, Bradley, 098764, broby@mines.edu
-Ward, T.J., 098763, tjward@mines.edu
-Ware, DeMarcus, 098762, dware@mines.edu
-Webster, Kayvon, 098761, kw@mines.edu
+Manning,Peyton,772233,pmanning@mines.edu
+Welker,Wes,123456,wwelker@mines.edu
+Thomas,Julias,123457,jthomas@mines.edu
+Sanders,Emmanuel,123458,esanders@mines.edu
+Tamme,Jason,123569,jtamme@mines.edu
+Knighton,Terrance,123450,tk@mines.edu
+Colquitt,Britton,098765,bcol@mines.edu
+Roby,Bradley,098764,broby@mines.edu
+Ward,T.J.,098763,tjward@mines.edu
+Ware,DeMarcus,098762,dware@mines.edu
+Webster,Kayvon,098761,kw@mines.edu
 
