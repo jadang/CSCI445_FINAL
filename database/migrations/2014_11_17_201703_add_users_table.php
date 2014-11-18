@@ -54,6 +54,7 @@ class AddUsersTable extends Migration {
 	{
 		//
 		Schema::drop('users');
+		Schema::drop('students');
 		Schema::drop('projects');
 	}
 
