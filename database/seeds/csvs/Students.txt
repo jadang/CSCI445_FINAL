@@ -37,4 +37,3 @@ Roby,Bradley,098764,broby@mines.edu
 Ward,T.J.,098763,tjward@mines.edu
 Ware,DeMarcus,098762,dware@mines.edu
 Webster,Kayvon,098761,kw@mines.edu
-

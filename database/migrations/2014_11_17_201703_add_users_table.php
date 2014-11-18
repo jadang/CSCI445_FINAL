@@ -20,7 +20,7 @@ class AddUsersTable extends Migration {
 			$table->string('CWID');
 			$table->string('Email');
 		});
-		/*
+		
 		Schema::create('users', function($table){
 			$table->increments('id');
 			$table->string('FirstName');
@@ -28,13 +28,13 @@ class AddUsersTable extends Migration {
 			$table->string('Email');
 			$table->string('CWID');
 			$table->boolean('isAdmin');
-			$table->foreign('FirstChoice')->references('id')->on('projects');
-			$table->foreign('SecondChoice')->references('id')->on('projects');
-			$table->foreign('ThirdChoice')->references('id')->on('projects');
-			$table->foreign('FourthChoice')->references('id')->on('projects');
+			$table->integer('FirstChoice')->references('id')->on('projects');
+			$table->integer('SecondChoice')->references('id')->on('projects');
+			$table->integer('ThirdChoice')->references('id')->on('projects');
+			$table->integer('FourthChoice')->references('id')->on('projects');
 			$table->text('OtherInformation');
-			$table->foreign('PreferredStudents')->references('id')->on('teammates');
-			$table->foreign('UnPreferredStudents')->references('id')->on('teammates');
+			$table->integer('PreferredStudents')->references('id')->on('teammates');
+			$table->integer('UnPreferredStudents')->references('id')->on('teammates');
 			$table->string('ProjectOrTeam');
 			});
 			
@@ -42,7 +42,7 @@ class AddUsersTable extends Migration {
 			$table->increments('id');
 			$table->string('FirstName');
 			$table->string('LastName');
-			});*/
+			});
 	}
 
 	/**

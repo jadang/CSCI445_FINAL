@@ -20,6 +20,7 @@ class StudentsTableSeeder extends CsvSeeder {
 		//DB::table($this->table)->truncate();
 		
 		parent::run();
+		Hash::make('CWID');
 	}
 
 }

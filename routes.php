@@ -11,7 +11,44 @@
 |
 */
 
+Route::model('student', 'Student');
+
 Route::get('/', function()
 {
-	return View::make('index');
+	return Redirect::to('login');
 });
+
+Route::get('login', function()
+{
+	$students = Student::all();
+	return View::make('login')
+	->with('students', $students);
+});
+
+Route::get('studentinfo', function()
+{
+	return View::make('studentinfo');
+});
+
+View::composer('studentinfo', function($view)
+{
+ $projects = Project::all();
+ if(count($projects) > 0){
+ $project_options = array_combine($projects->lists('id'), 
+ $projects->lists('Project'));
+ } else {
+ $project_options = array(null, 'Unspecified');
+ }
+ $view->with('project_options', $project_options);
+});
+
+Route::post('login', function(){
+  if(Auth::attempt(Input::only('Email', 'CWID')))
+    return Redirect::intended('/');
+  else
+    return Redirect::back()
+      ->withInput()
+      ->with('error', "Invalid credentials");
+});
+
+
