@@ -21,7 +21,7 @@ class AddUsersTable extends Migration {
 			$table->string('CWID');
 			$table->boolean('isAdmin');
 			$table->foreign('FistChoice')->references('id')->on('projects');
-			$table->foriegn('SecondChoice')->references('id')->on('projects');
+			$table->foreign('SecondChoice')->references('id')->on('projects');
 			$table->foreign('ThirdChoice')->references('id')->on('projects');
 			$table->foreign('FourthChoice')->references('id')->on('projects');
 			$table->text('OtherInformation');
