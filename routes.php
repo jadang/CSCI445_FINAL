@@ -12,6 +12,7 @@
 */
 
 Route::model('student', 'Student');
+Route::model('project', 'Project');
 
 Route::get('/', function()
 {
@@ -27,7 +28,11 @@ Route::get('login', function()
 
 Route::get('studentinfo', function()
 {
-	return View::make('studentinfo');
+	$projects = Project::all();
+	$students = Student::all();
+	return View::make('studentinfo')
+	->with('projects', $projects)
+	->with('students', $students);
 });
 
 View::composer('studentinfo', function($view)
@@ -43,12 +48,17 @@ View::composer('studentinfo', function($view)
 });
 
 Route::post('login', function(){
-  if(Auth::attempt(Input::only('Email', 'CWID')))
-    return Redirect::intended('/');
+  if(Auth::attempt(Input::only('email', 'CWID')))
+    return Redirect::intended('studentinfo');
   else
     return Redirect::back()
       ->withInput()
       ->with('error', "Invalid credentials");
+});
+
+Route::get('logout',function(){
+	Auth::logout();
+	return Redirect::to('login');
 });
 
 

@@ -38,7 +38,7 @@ class AddUsersTable extends Migration {
 			$table->string('ProjectOrTeam');
 			});
 			
-			Schema::create('teammates', function($table){
+		Schema::create('teammates', function($table){
 			$table->increments('id');
 			$table->string('FirstName');
 			$table->string('LastName');

@@ -17,7 +17,7 @@ class ProjectsTableSeeder extends CsvSeeder {
 	public function run()
 	{
 		DB::disableQueryLog();
-		//DB::table($this->table)->truncate();
+		DB::table($this->table)->truncate();
 		
 		parent::run();
 	}

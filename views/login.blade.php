@@ -13,16 +13,19 @@
 <br>
 <div class="form-group">
 {{Form::label('Password')}}
-{{Form::password('password')}} 
+{{Form::password('CWID')}} 
 </div>
-<input type="button" value="Login" onClick="clickedButton()"/>
+{{Form::submit("Log in")}}
 {{Form::close()}}
-
-echo {{$students}}
 @stop
 
 <script type = "text/javascript" language="JavaScript">
 	function clickedButton() {
-		window.location = '/team13/project/public/login';
+		@foreach($students as $student)
+    			
+				window.location = '/team13/project/public/studentinfo';
+			
+  		@endforeach
+		window.location = '/team13/project/public/studentinfo';
 	}
 </script>
