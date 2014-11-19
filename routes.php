@@ -48,7 +48,7 @@ View::composer('studentinfo', function($view)
 });
 
 Route::post('login', function(){
-  if(Auth::attempt(Input::only('email', 'CWID')))
+  if(Auth::attempt(Input::only('username', 'password')))
     return Redirect::intended('studentinfo');
   else
     return Redirect::back()
@@ -58,7 +58,7 @@ Route::post('login', function(){
 
 Route::get('logout',function(){
 	Auth::logout();
-	return Redirect::to('login');
+	return Redirect::to('/');
 });
 
 

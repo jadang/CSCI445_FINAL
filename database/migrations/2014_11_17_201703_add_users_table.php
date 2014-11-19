@@ -25,8 +25,8 @@ class AddUsersTable extends Migration {
 			$table->increments('id');
 			$table->string('FirstName');
 			$table->string('LastName');
-			$table->string('Email');
-			$table->string('CWID');
+			$table->string('username');
+			$table->string('password');
 			$table->boolean('isAdmin');
 			$table->integer('FirstChoice')->references('id')->on('projects');
 			$table->integer('SecondChoice')->references('id')->on('projects');
@@ -36,6 +36,8 @@ class AddUsersTable extends Migration {
 			$table->integer('PreferredStudents')->references('id')->on('teammates');
 			$table->integer('UnPreferredStudents')->references('id')->on('teammates');
 			$table->string('ProjectOrTeam');
+			$table->string('remember_token')->nullable();
+			$table->timestamps();
 			});
 			
 		Schema::create('teammates', function($table){

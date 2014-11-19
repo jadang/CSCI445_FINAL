@@ -7,13 +7,13 @@
 @section('content')
 {{Form::open()}}
 <div class="form-group">
-{{Form::label('Email')}}
-{{Form::text('email')}} 
+{{Form::label('Username')}}
+{{Form::text('username')}} 
 </div>
 <br>
 <div class="form-group">
 {{Form::label('Password')}}
-{{Form::password('CWID')}} 
+{{Form::password('password')}} 
 </div>
 {{Form::submit("Log in")}}
 {{Form::close()}}

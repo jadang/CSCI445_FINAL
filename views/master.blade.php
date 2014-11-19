@@ -11,7 +11,6 @@
 			<div class="page-header">
 				<div class="text-right">
 					@if(Auth::check())
-						Logged in as <strong> {{{Auth::email()->email}}} </strong>
 						{{link_to('logout', 'Log Out')}}
 					@endif
 				</div>
