@@ -3,8 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>FieldSession</title>
-		<link rel="stylesheet" href="{{asset('bootstrap-3.0.0.min.
-		css')}}">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 	</head>
 	<body>
 		<div class="container">

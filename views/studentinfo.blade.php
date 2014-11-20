@@ -65,7 +65,7 @@ foreach($students as $s){
 </div>
 
 <div class="form-group">
-<h2>Want to Work With</h2>
+<h2>Prefer Project or Team</h2>
 {{Form::label('In general, is it more important to you to be on a project you selected or with preferred team members?')}}
 <br>
 {{Form::select('projectorteam',['Project','Team',"Doesn't Matter"])}} 

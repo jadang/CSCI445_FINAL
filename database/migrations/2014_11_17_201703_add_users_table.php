@@ -32,6 +32,9 @@ class AddUsersTable extends Migration {
 			$table->integer('SecondChoice')->references('id')->on('projects');
 			$table->integer('ThirdChoice')->references('id')->on('projects');
 			$table->integer('FourthChoice')->references('id')->on('projects');
+			$table->string('Major');
+			$table->string('Minor');
+			$table->integer('Project')->references('id')->on('projects');
 			$table->text('OtherInformation');
 			$table->integer('PreferredStudents')->references('id')->on('teammates');
 			$table->integer('UnPreferredStudents')->references('id')->on('teammates');
